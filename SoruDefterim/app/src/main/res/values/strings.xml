@@ -1,0 +1,505 @@
+<resources>
+    <string name="app_name">Soru Defterim</string>
+
+    <string name="question">Question!</string>
+
+
+    <string-array name="tyt_courses">
+        <item>Matematik</item>
+        <item>Türkçe</item>
+        <item>Geometri</item>
+        <item>Fizik</item>
+        <item>Kimya</item>
+        <item>Biyoloji</item>
+        <item>Tarih</item>
+        <item>Coğrafya</item>
+        <item>Felsefe</item>
+        <item>Din Kültürü</item>
+    </string-array>
+
+    <string-array name="tyt_math">
+        <item>Sayılar</item>
+        <item>Birinci Dereceden Denklem ve Eşitsizlikler</item>
+        <item>Üslü-Köklü Sayılar</item>
+        <item>Oran-Orantı ve Problemler</item>
+        <item>Kümeler</item>
+        <item>Fonsiyonlar</item>
+        <item>Polinomlar</item>
+        <item>Özdeşlikler ve Çarpanlara Ayırma</item>
+        <item>İkinci Dereceden Denklemler</item>
+        <item>İkinci Dereceden Fonksiyonlar(Parabol)</item>
+        <item>Permültasyon Kombinasyon ,Binom Açılımı, Olasılık ve İstatistik</item>
+        <item>Karma</item>
+
+    </string-array>
+
+    <string-array name="tyt_lit">
+
+        <item>Dil ve İletişim</item>
+        <item>Sözcük ve Söz Öbeklerinin Anlamı</item>
+        <item>Cümlede Anlam</item>
+        <item>Paragraf</item>
+        <item>Ses Bilgisi - Yazım - Noktalama</item>
+        <item>Sözcükte Yapı</item>
+        <item>Sözcük Türleri</item>
+        <item>Cümlenin Ögeleri</item>
+        <item>Cümle Türleri</item>
+        <item>Anlatım Bozuklukları</item>
+
+
+
+    </string-array>
+
+
+    <string-array name="tyt_bio">
+
+
+        <item>Biyoloji ve Canlıların Ortak Özellikleri</item>
+        <item>Canlının Yapısında Bulunan Temel Bileşenler</item>
+        <item>Hücre Organalleri ve Hücre Zarında Madde Geçişleri</item>
+        <item>Ekoloji</item>
+        <item>Canlıların Sınıflandırılması</item>
+        <item>Hücre Bölünmeleri</item>
+        <item>Kalıtım</item>
+        <item>Nükleik Asitler ve Virüsler</item>
+        <item>Canlılarda Enerji Dönüşümü</item>
+        <item>Karma</item>
+
+
+    </string-array>
+
+
+    <string-array name="tyt_geo">
+
+
+        <item>Doğa İnsan</item>
+        <item>Dünyanın Şekli Ve Hareketleri</item>
+        <item>Coğrafi Konum</item>
+        <item>Harita Bilgisi</item>
+        <item>İklim Bilgisi</item>
+        <item>Türkiye\'de İklim</item>
+        <item>Yerin Şekillenmesi, İç ve Dış Kuvvetler</item>
+        <item>Nüfus Yerleşme ve Ekonomik Faaliyetler</item>
+        <item>Türkiye\'de Nüfus ve Yerleşme</item>
+        <item>Su, Toprak ve Bitki Örtüsü</item>
+        <item>Ortak Payda: Bölge</item>
+        <item>Ulaşım</item>
+        <item>Çevre ve İnsan</item>
+        <item>Doğal Afetler</item>
+        <item>Karma</item>
+
+
+    </string-array>
+
+
+    <string-array name="tyt_trigo">
+
+        <item>Temel Kavramlar</item>
+        <item>Doğruda Açılar</item>
+        <item>Üçgende Açılar</item>
+        <item>Özel Üçgenler</item>
+        <item>Dik Üçgen</item>
+        <item>İkizkenar Üçgen</item>
+        <item>Eşkenar Üçgen</item>
+        <item>Üçgende Alan</item>
+        <item>Açıortay</item>
+        <item>Kenarortay</item>
+        <item>Üçgende Benzerlik</item>
+        <item>Açı Kenar Bağıntıları</item>
+        <item>Çokgenler</item>
+        <item>Dikdörtgen</item>
+        <item>Özel Dörtgenler</item>
+        <item>Çemberler</item>
+        <item>Katı Cisimler</item>
+        <item>Prizmalar</item>
+        <item>Noktanın Analitiği</item>
+        <item>Doğrunun Analitiği</item>
+        <item>Çemberin Analitiği</item>
+        <item>Trigonometri</item>
+
+    </string-array>
+
+    <string-array name="tyt_religion">
+
+
+        <item>Kur’an-ı Kerim’in Anlaşılması ve Kavranması</item>
+        <item>İnsan ve Din</item>
+        <item>İslam ve İbadetler</item>
+        <item>İslam Düşüncesinde Yorumlar, Mezhepler</item>
+        <item>Hz. Muhammed’in Hayatı, Örnekliği ve Onu Anlama</item>
+        <item>İslam ve Bilim, Estetik, Barış</item>
+        <item>Yaşayan Dinler ve Benzer Özellikleri</item>
+
+    </string-array>
+
+    <string-array name="tyt_philo">
+        <item>Felsefe’nin Konusu</item>
+        <item>Bilgi Felsefesi</item>
+        <item>Varlık Felsefesi</item>
+        <item>Ahlak Felsefesi</item>
+        <item>Sanat Felsefesi</item>
+        <item>Din Felsefesi</item>
+        <item>Siyaset Felsefesi</item>
+        <item>Bilim Felsefesi</item>
+
+    </string-array>
+
+    <string-array name="tyt_physics">
+
+
+        <item>Fizik Bilimine Giriş</item>
+        <item>Madde ve Özellikleri</item>
+        <item>Hareket ve Kuvvet</item>
+        <item>İş, Güç ve Enerji I</item>
+        <item>Isı ve Sıcaklık</item>
+        <item>Elektrostatik</item>
+        <item>Elektrik ve Manyetizma</item>
+        <item>Basınç</item>
+        <item>Kaldırma Kuvveti</item>
+        <item>Dalgalar</item>
+        <item>Optik</item>
+
+    </string-array>
+
+    <string-array name="tyt_history">
+
+
+        <item>Tarih Bilimi</item>
+        <item>Uygarlığın Doğuşu ve İlk Uygarlıklar</item>
+        <item>İlk Türk Devletleri</item>
+        <item>İslam Tarihi ve Uygarlığı</item>
+        <item>Türk-İslam Devletleri</item>
+        <item>Türkiye Tarihi</item>
+        <item>Beylikten Devlete (1300-1453)</item>
+        <item>Dünya Gücü: Osmanlı Devleti (1453-1600)</item>
+        <item>Arayış Yılları (17. Yüzyıl)</item>
+        <item>Avrupa ve Osmanlı Devleti (18. Yüzyıl)</item>
+       <item> En Uzun Yüzyıl (1800-1922)</item>
+       <item> 20. Yüzyıl Başlarında Osmanlı Devleti</item>
+       <item> 1. Dünya Savaşı – Milli Mücadeleye Hazırlık Dönemi</item>
+       <item> Kurtuluş Savaşında Cepheler</item>
+       <item> Türk İnkılabı</item>
+       <item> Atatürkçülük ve Atatürk İlkeleri</item>
+       <item> Türk Dış Politikası</item>
+
+    </string-array>
+
+    <string-array name="tyt_chem">
+
+        <item>Kimya Bilimi</item>
+        <item>Atom ve Periyodik Sistem</item>
+        <item>Kimyasal Türler Arası Etkileşimler</item>
+        <item>Kimyasal Hesaplamalar</item>
+        <item>Kimyanın Temel Kanunları</item>
+        <item>Asit, Baz ve Tuz</item>
+        <item>Maddenin Halleri</item>
+        <item>Karışımlar</item>
+        <item>Endüstride ve Canlılarda Enerji</item>
+        <item>Kimya Her Yerde</item>
+
+    </string-array>
+
+
+
+
+    <string-array name="ayt_courses">
+
+        <item>Matematik</item>
+        <item>Edebiyat</item>
+        <item>Geometri</item>
+        <item>Fizik</item>
+        <item>Kimya</item>
+        <item>Biyoloji</item>
+        <item>Tarih</item>
+        <item>Coğrafya</item>
+        <item>Felsefe</item>
+        <item>Din Kültürü</item>
+
+    </string-array>
+
+
+
+    <string-array name="ayt_math">
+
+        <item>Temel Kavramlar</item>
+        <item>Sayı Basamakları </item>
+        <item>Rasyonel Sayılar </item>
+        <item>Ondalıklı Sayılar </item>
+        <item>Basit Eşitsizlikler </item>
+        <item>Mutlak Değer </item>
+        <item>Üslü Sayılar </item>
+        <item>Köklü Sayılar </item>
+        <item>Çarpanlara Ayırma</item>
+        <item>Denklem Çözme</item>
+        <item>Oran-Orantı</item>
+        <item>Problemler</item>
+        <item>Fonksiyonlar</item>
+        <item>Kümeler</item>
+        <item>Permütasyon</item>
+        <item>Kombinasyon</item>
+        <item>Binom</item>
+        <item>Olasılık</item>
+        <item>İstatistik</item>
+        <item>2. Dereceden Denklemler</item>
+        <item>Karmaşık Sayılar</item>
+        <item>Parabol</item>
+        <item>Polinomlar</item>
+        <item>Mantık</item>
+        <item>Modüler Aritmetik</item>
+        <item>Eşitsizlikler</item>
+        <item>Logaritma</item>
+        <item>Diziler</item>
+        <item>Seriler</item>
+        <item>Trigonometri</item>
+        <item>Limit ve Süreklilik</item>
+        <item>Türev</item>
+        <item>İntegral</item>
+
+    </string-array>
+
+
+    <string-array name="ayt_tri">
+
+        <item>Doğruda ve Üçgende Açılar</item>
+        <item>Dik ve Özel Üçgenler</item>
+        <item>Dik Üçgende Trigonemetrik Bağıntılar</item>
+        <item>İkizkenar ve Eşkenar Üçgen</item>
+        <item>Üçgende Alanlar</item>
+        <item>Üçgende Açıortay Bağıntıları</item>
+        <item>Üçgende Kenarortay Bağıntıları</item>
+        <item>Üçgende Eşlik ve Benzerlik</item>
+        <item>Üçgende Açı-Kenar Bağıntıları</item>
+        <item>Çokgenler</item>
+        <item>Dörtgenler</item>
+        <item>Yamuk</item>
+        <item>Paralelkenar</item>
+        <item>Eşkenar Dörtgen – Deltoid</item>
+        <item>Dikdörtgen</item>
+        <item>Çemberde Açılar</item>
+        <item>Çemberde Uzunluk</item>
+        <item>Daire</item>
+        <item>Prizmalar</item>
+        <item>Piramitler</item>
+        <item>Küre</item>
+        <item>Koordinat Düzlemi ve Noktanın Analitiği</item>
+        <item>Vektörler-1</item>
+        <item>Doğrunun Analitiği</item>
+        <item>Tekrar Eden, Dönen ve Yansıyan Şekiller</item>
+        <item>Uzay Geometri</item>
+        <item>Dönüşümlerle Geometri</item>
+        <item>Trigonometri</item>
+        <item>Çemberin Analitiği</item>
+        <item>Genel Konik Tanımı (Dış Merkezlik)</item>
+        <item>Parabol</item>
+        <item>Elips</item>
+        <item>Hiperbol</item>
+
+    </string-array>
+
+
+    <string-array name="ayt_physic">
+
+        <item>Fizik Bilimine Giriş</item>
+        <item>Madde ve Özellikleri</item>
+        <item>Hareket ve Kuvvet</item>
+        <item>Enerji</item>
+        <item>Isı ve Sıcaklık</item>
+        <item>Elektrostatik</item>
+        <item>Elektrik ve Manyetizma</item>
+        <item>Basınç ve Kaldırma Kuvveti</item>
+        <item>Dalgalar</item>
+        <item>Optik</item>
+        <item>Kuvvet ve Hareket</item>
+        <item>Çembersel Hareket</item>
+        <item>Basit Harmonik Hareket</item>
+        <item>Dalga Mekaniği</item>
+        <item>Atom Fiziğine Giriş ve Radyoaktive</item>
+        <item>Modern Fizik</item>
+        <item>Modern Fiziğin Teknolojideki Uygulamaları</item>
+
+    </string-array>
+
+
+    <string-array name="ayt_chem">
+
+        <item>Kimya Bilimi</item>
+        <item>Atom ve Periyodik Sistem</item>
+        <item>Modern Atom Teorisi</item>
+        <item>Kimyasal Türler Arası Tepkimeler</item>
+        <item>Kimyasal Hesaplamalar</item>
+        <item>Asit, Baz ve Tuz</item>
+        <item>Maddenin Halleri</item>
+        <item>Gazlar</item>
+        <item>Karışımlar</item>
+        <item>Sıvı Çözeltiler</item>
+        <item>Kimya ve Enerji</item>
+        <item>Tepkimelerde Hız ve Denge</item>
+        <item>Kimya ve Elektrik</item>
+        <item>Karbon Kimyasına Giriş</item>
+        <item>Organik Bileşikler</item>
+        <item>Endüstride ve Canlılarda Enerji</item>
+        <item>Kimya Her Yerde</item>
+        <item>Hayatımızdaki Kimya</item>
+
+    </string-array>
+
+
+
+    <string-array name="ayt_bio">
+
+        <item>Biyoloji Bilimi</item>
+        <item>Canlıların Yapısında Bulunan Temel Bileşenler</item>
+        <item>Hücrenin Yapısı ve İşlevi</item>
+        <item>Canlıların Çeşitliliği ve Sınıflandırması</item>
+        <item>Üreme</item>
+        <item>İnsanda Üreme Sistemi</item>
+        <item>Kalıtım</item>
+        <item>Modern Genetik Uygulamaları</item>
+        <item>Ekosistem Ekolojisi</item>
+        <item>Dünyamız</item>
+        <item>Canlılarda Enerji Dönüşümü</item>
+        <item>Solunum</item>
+        <item>İnsan Fizyolojisi</item>
+        <item>Endokrin Sistemi</item>
+        <item>Duyu Organları</item>
+        <item>Destek ve Hareket Sistemi</item>
+        <item>Sindirim Sistemi</item>
+        <item>İnsanda Sinir Sistemi</item>
+        <item>Dolaşım Sistemi</item>
+        <item>Genden Proteine</item>
+        <item>Hayatın Başlangıcı ve Evrim</item>
+        <item>Bitkisel Dokular</item>
+        <item>Bitki Biyolojisi</item>
+        <item>Kominite ve Popülasyon Ekolojisi</item>
+
+    </string-array>
+
+
+    <string-array name="ayt_lit">
+
+        <item>Güzel Sanatlar ve Edebiyat</item>
+        <item>Metinlerin Sınıflandırılması</item>
+        <item>Şiir Bilgisi</item>
+        <item>Söz Sanatları</item>
+        <item>İslamiyet Öncesi Türk Edebiyatı</item>
+        <item>İslam Uygarlığı Çevresinde Gelişen Türk Edebiyatı</item>
+        <item>Halk Edebiyatı</item>
+        <item>Divan Edebiyatı</item>
+        <item>Edebiyat Akımları</item>
+        <item>Tanzimat Edebiyatı</item>
+        <item>Servet-i Fünun Edebiyatı</item>
+        <item>Fecr-i Ati Edebiyatı</item>
+        <item>Milli Edebiyat</item>
+        <item>Cumhuriyet Dönemi Türk Edebiyatı</item>
+        <item>Batı Edebiyatı</item>
+
+    </string-array>
+
+
+
+    <string-array name="ayt_geo">
+
+        <item>Doğa ve İnsan</item>
+        <item>Dünya’nın Şekli ve Hareketleri</item>
+        <item>Coğrafi Konum</item>
+        <item>Harita Bilgisi</item>
+        <item>İklim Bilgisi</item>
+        <item>Yerin Şekillenmesi</item>
+        <item>Doğanın Varlıkları</item>
+        <item>Beşeri Yapı</item>
+        <item>Nüfusun Gelişimi, Dağılışı ve Niteliği</item>
+        <item>Göçlerin Nedenleri ve Sonuçları</item>
+        <item>Geçim Tarzları</item>
+        <item>Türkiye’nin Yeryüzü Şekilleri ve Özellikleri</item>
+        <item>Türkiye İklimi ve Özellikleri</item>
+        <item>Türkiye’nin Doğal Varlıkları</item>
+        <item>Türkiye’de Yerleşme, Nüfus ve Göç</item>
+        <item>Bölge Türleri ve Sınırları</item>
+        <item>Konum ve Etkileşim</item>
+        <item>Coğrafi Keşifler</item>
+        <item>Doğa ile İnsan Arasındaki Etkileşim</item>
+        <item>Doğal Afetler</item>
+    </string-array>
+
+
+    <string-array name="aty_history">
+        <item>Tarih Bilimi</item>
+        <item>Uygarlığın Doğuşu ve İlk Uygarlıklar</item>
+        <item>İlk Türk Devletleri</item>
+        <item>İslam Tarihi ve Uygarlığı</item>
+        <item>Türk-İslam Devletleri</item>
+        <item>Türkiye Tarihi</item>
+        <item>Beylikten Devlete (1300-1453)</item>
+        <item>Dünya Gücü: Osmanlı Devleti (1453-1600)</item>
+        <item>Arayış Yılları (17. Yüzyıl)</item>
+        <item>Avrupa ve Osmanlı Devleti (18. Yüzyıl)</item>
+        <item>En Uzun Yüzyıl (1800-1922)</item>
+        <item>1881’den 1919’a Mustafa Kemal</item>
+        <item>Milli Mücadele’nin Hazırlık Dönemi</item>
+        <item>Kurtuluş Savaşı’nda Cepheler</item>
+        <item>Türk İnkılabı</item>
+        <item>Atatürkçülük ve Atatürk İlkeleri</item>
+        <item>Türk Dış Politikası</item>
+        <item>Atatürk’ün Ölümü</item>
+        <item>Yüzyılın Başlarında Dünya</item>
+        <item>İkinci Dünya Savaşı</item>
+        <item>Soğuk Savaş Dönemi</item>
+        <item>Yumuşama Dönemi ve Sonrası</item>
+        <item>Küreselleşen Dünya</item>
+        <item>Türklerde Devlet Teşkilatı</item>
+        <item>Türklerde Toplum Yapısı</item>
+        <item>Türklerde Hukuk</item>
+        <item>Türklerde Ekonomi</item>
+        <item>Türklerde Eğitim</item>
+        <item>Türklerde Sanat</item>
+
+
+    </string-array>
+
+
+    <string-array name="ayt_philo">
+        <item>Psikolojinin Alanı</item>
+        <item>Organizma ve Çevre</item>
+        <item>Öğrenme</item>
+        <item>Bellek</item>
+        <item>Düşünme ve Bilinç</item>
+        <item>Ruh Sağlığı</item>
+        <item>Zeka ve Kişilik</item>
+        <item>Sosyal Davranış</item>
+        <item>Mantığın Alanı</item>
+        <item>Klasik Mantık-1(Kavram, Terim, Beş Tümel Tanım)</item>
+        <item>Klasik Mantık-2(Önermeler ve önermeler arası ilişki)</item>
+        <item>Klasik Mantık-3(Çıkarım ve Kıyas)</item>
+        <item>Sembolik Mantık(Önermeler Mantığı)</item>
+        <item>Denetlemeler</item>
+        <item>Niceleme(Yüklemler) Mantığı ve Diğer Mantıklar</item>
+        <item>Sosyolojiye Giriş</item>
+        <item>Toplumsal Yapı</item>
+        <item>Toplumsal Kurumlar-1(Aile ve Ekonomi)</item>
+        <item>Toplumsal Kurumlar-2(Siyaset ve Din)</item>
+        <item>Kültür</item>
+        <item>Toplumsal Değişme</item>
+    </string-array>
+
+    <string-array name="ayt_religion">
+        <item>Kuran-ı Kerim’in Anlaşılması ve Yorumu</item>
+        <item>Kuran-ı Kerim ve Akıl</item>
+        <item>Zekat</item>
+        <item>İbadet</item>
+        <item>Hz. Muhammed (SAV) Hayatı</item>
+        <item>İslam Düşüncesinde Yorumlar</item>
+        <item>İslam Dinine Göre Kötü Alışkanlıklar</item>
+    </string-array>
+
+
+
+
+
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

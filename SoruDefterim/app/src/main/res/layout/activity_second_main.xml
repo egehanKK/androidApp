@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <Switch
+        android:track="@drawable/switch_track"
+        android:thumb="@drawable/switch_button"
+        android:id="@+id/selectFieldSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="TYT  "
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#33333380">
+
+    </View>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_weight="15"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"/>
+
+</LinearLayout>

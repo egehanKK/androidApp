@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/navigation_slug"
+        android:icon="@drawable/ic_cake"
+        android:title="Boş" />
+
+    <item
+        android:id="@+id/navigation_monster"
+        android:icon="@drawable/show_question_icon"
+        android:title="Sorularım" />
+
+    <item
+        android:id="@+id/navigation_add_question"
+        android:icon="@drawable/add_question_icon"
+        android:title="Soru Ekle" />
+
+</menu>
