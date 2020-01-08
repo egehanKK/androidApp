@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "350348431465",
+    "firebase_url": "https://sorudefterim-69fd7.firebaseio.com",
+    "project_id": "sorudefterim-69fd7",
+    "storage_bucket": "sorudefterim-69fd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350348431465:android:bf11bd165fe3a905f5d2f8",
+        "android_client_info": {
+          "package_name": "com.egehankarakose.sorudefterim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350348431465-fvrq11ftie8qntdbqkgrlfupf6q5t34n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR0UawtlOLgYXj06yphzw2gpi5uNolmk0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350348431465-fvrq11ftie8qntdbqkgrlfupf6q5t34n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

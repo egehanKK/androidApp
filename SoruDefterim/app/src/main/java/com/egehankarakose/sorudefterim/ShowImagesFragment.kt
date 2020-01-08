@@ -6,28 +6,19 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.provider.MediaStore
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.egehankarakose.sorudefterim.Adapters.BitmapImageAdapter
 
 import com.egehankarakose.sorudefterim.Adapters.ImagesAdapter
 import com.egehankarakose.sorudefterim.Adapters.OnItemClickListener3
-import com.egehankarakose.sorudefterim.Models.BitmapImage
 
 import com.egehankarakose.sorudefterim.Models.ImagesModel
-import com.theartofdev.edmodo.cropper.CropImage
-import com.theartofdev.edmodo.cropper.CropImageView
-import java.io.ByteArrayOutputStream
 
 
 class ShowImagesFragment : Fragment(), OnItemClickListener3 {
@@ -39,6 +30,8 @@ class ShowImagesFragment : Fragment(), OnItemClickListener3 {
     var courseName = ""
     var subjectName = ""
     var selectedField = ""
+    var setIdsForCheck : ArrayList<String> = ArrayList()
+
 
 
 
@@ -55,7 +48,8 @@ class ShowImagesFragment : Fragment(), OnItemClickListener3 {
 
         var photosRecyclerView =view.findViewById<RecyclerView>(R.id.PhotosRecyclerView)
 
-        var questionNo = view.findViewById<TextView>(R.id.questionNo)
+        var questionNo = view.findViewById<TextView>(R.id.questionNo1)
+        var answerNo = view.findViewById<TextView>(R.id.answerNo1)
 
 
 
@@ -93,6 +87,7 @@ class ShowImagesFragment : Fragment(), OnItemClickListener3 {
 
 
         photosRecyclerView.layoutManager = GridLayoutManager(view.context, 3) as RecyclerView.LayoutManager?
+
 //      Create an arraylist
 
         var tableName = courseName.replace("\\s".toRegex(),"") +"_" + subjectName.replace("\\s".toRegex(),"")
@@ -100,7 +95,14 @@ class ShowImagesFragment : Fragment(), OnItemClickListener3 {
 
         val dataList = ArrayList<ImagesModel>()
         for (i in 0..courseImages.size-1){
-            dataList.add(ImagesModel(courseImages[i],setIds[i]))
+            var isChecked = false
+
+            if (i < setIds.size){
+                if (setIds[i] in setIdsForCheck ){
+                    isChecked = true
+                }
+            }
+            dataList.add(ImagesModel(courseImages[i],setIds[i],isChecked))
         }
 
 //        pass the values to RvAdapter
@@ -110,9 +112,7 @@ class ShowImagesFragment : Fragment(), OnItemClickListener3 {
         rvAdapter.notifyDataSetChanged()
 
         questionNo.text = courseImages.size.toString()
-
-
-
+        answerNo.text = setIdsForCheck.size.toString()
 
 
         return view
@@ -149,14 +149,18 @@ class ShowImagesFragment : Fragment(), OnItemClickListener3 {
                     val byteArray = cursor.getBlob(image)
                     val bitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.size)
                     courseImages.add(bitmap)
+                    setIds.add(cursor.getString(setId))
+                }else{
+                    if (cursor.getString(setId) !in setIdsForCheck){
+                        setIdsForCheck.add(cursor.getString(setId))
+                    }
+
 
                 }
-                setIds.add(cursor.getString(setId))
 
             }
 
             cursor.close()
-
 
         } catch (e: Exception) {
             e.printStackTrace()

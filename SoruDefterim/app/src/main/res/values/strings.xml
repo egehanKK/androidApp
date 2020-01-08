@@ -4,6 +4,21 @@
     <string name="question">Question!</string>
 
 
+    <string name="title_activity_maps">MAP</string>
+    <string name="login_fail">Giriş Başarısız</string>
+    <string name="complete">Boş alanları doldurunuz!!</string>
+    <string name="login_success">Giriş Yapıldı</string>
+    <string name="mail_check">Mailinizi Onaylayınız</string>
+    <string name="mail_success">Şifre sıfırlama maili gönderildi</string>
+    <string name="mail_fail">İşlem başarısız</string>
+    <string name="match_fail">Şifreler eşleşmiyor!!</string>
+    <string name="fill_text">Boş alanları doldurunuz!!</string>
+    <string name="register_success">Üyelik Kaydı Oluşturuldu</string>
+    <string name="register_fail">Üyelik Kaydı Oluşturulamadı</string>
+    <string name="mail_confirm">Mail kutunuzu kontrol edip maili onaylayın</string>
+    <string name="mail_confirm_fail">Mail gönderilirirken sorun oluştu!!</string>
+
+
     <string-array name="tyt_courses">
         <item>Matematik</item>
         <item>Türkçe</item>
@@ -45,7 +60,6 @@
         <item>Cümlenin Ögeleri</item>
         <item>Cümle Türleri</item>
         <item>Anlatım Bozuklukları</item>
-
 
 
     </string-array>
@@ -174,13 +188,13 @@
         <item>Dünya Gücü: Osmanlı Devleti (1453-1600)</item>
         <item>Arayış Yılları (17. Yüzyıl)</item>
         <item>Avrupa ve Osmanlı Devleti (18. Yüzyıl)</item>
-       <item> En Uzun Yüzyıl (1800-1922)</item>
-       <item> 20. Yüzyıl Başlarında Osmanlı Devleti</item>
-       <item> 1. Dünya Savaşı – Milli Mücadeleye Hazırlık Dönemi</item>
-       <item> Kurtuluş Savaşında Cepheler</item>
-       <item> Türk İnkılabı</item>
-       <item> Atatürkçülük ve Atatürk İlkeleri</item>
-       <item> Türk Dış Politikası</item>
+        <item> En Uzun Yüzyıl (1800-1922)</item>
+        <item> 20. Yüzyıl Başlarında Osmanlı Devleti</item>
+        <item> 1. Dünya Savaşı – Milli Mücadeleye Hazırlık Dönemi</item>
+        <item> Kurtuluş Savaşında Cepheler</item>
+        <item> Türk İnkılabı</item>
+        <item> Atatürkçülük ve Atatürk İlkeleri</item>
+        <item> Türk Dış Politikası</item>
 
     </string-array>
 
@@ -200,8 +214,6 @@
     </string-array>
 
 
-
-
     <string-array name="ayt_courses">
 
         <item>Matematik</item>
@@ -216,7 +228,6 @@
         <item>Din Kültürü</item>
 
     </string-array>
-
 
 
     <string-array name="ayt_math">
@@ -344,7 +355,6 @@
     </string-array>
 
 
-
     <string-array name="ayt_bio">
 
         <item>Biyoloji Bilimi</item>
@@ -394,7 +404,6 @@
         <item>Batı Edebiyatı</item>
 
     </string-array>
-
 
 
     <string-array name="ayt_geo">
@@ -490,12 +499,6 @@
         <item>İslam Düşüncesinde Yorumlar</item>
         <item>İslam Dinine Göre Kötü Alışkanlıklar</item>
     </string-array>
-
-
-
-
-
-
 
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -16,11 +16,18 @@ import kotlin.concurrent.schedule
 
 class MyHolder3(itemView: View): RecyclerView.ViewHolder(itemView){
     val image = itemView.addQuestionImage
+    val checkImage = itemView.checkImagesView
+
 
 
 
     fun bind(imagesModel: ImagesModel, clickListener: OnItemClickListener3){
         image.setImageBitmap(imagesModel.image)
+        if (imagesModel.isChecked){
+            checkImage.setBackgroundResource(R.drawable.check_icon)
+        }else{
+            checkImage.setBackgroundResource(R.mipmap.question_mark_icon)
+        }
 
 
         itemView.setOnClickListener{
@@ -40,8 +47,7 @@ class MyHolder3(itemView: View): RecyclerView.ViewHolder(itemView){
 class ImagesAdapter(val userList: ArrayList<ImagesModel>, val itemClickListener: OnItemClickListener3) : RecyclerView.Adapter<MyHolder3>() {
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyHolder3 {
         val v = LayoutInflater.from(p0?.context).inflate(R.layout.adapter_show_images, p0, false)
-        v.layoutParams.height = 300
-        v.layoutParams.width = 300
+
         return MyHolder3(v)
     }
     override fun getItemCount(): Int {

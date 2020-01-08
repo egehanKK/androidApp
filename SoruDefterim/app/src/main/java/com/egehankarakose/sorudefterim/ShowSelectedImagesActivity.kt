@@ -8,9 +8,13 @@ import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.TextView
+import android.widget.*
+import androidx.core.view.isVisible
+import androidx.core.widget.addTextChangedListener
 import androidx.viewpager.widget.ViewPager
 import com.egehankarakose.sorudefterim.Adapters.ViewPagerAdapter
 import com.theartofdev.edmodo.cropper.CropImage
@@ -33,7 +37,9 @@ class ShowSelectedImagesActivity : AppCompatActivity() {
 
 
 
-        var noteText = findViewById<TextView>(R.id.showNotes)
+        var noteText = findViewById<EditText>(R.id.showNotes)
+        var checkButton = findViewById<ImageView>(R.id.updateNoteBtn)
+        checkButton.isVisible = false
 
 
         var bundle :Bundle?= intent.extras
@@ -49,7 +55,7 @@ class ShowSelectedImagesActivity : AppCompatActivity() {
         var tableName = courseName.replace("\\s".toRegex(),"") +"_" + subjectName.replace("\\s".toRegex(),"")
         getFromDatabase(tableName, setId)
 
-        noteText.text = noteShow
+        noteText.setText(noteShow)
 
 
         viewPager = findViewById<View>(R.id.viewPager) as ViewPager
@@ -74,6 +80,44 @@ class ShowSelectedImagesActivity : AppCompatActivity() {
                 .setGuidelines(CropImageView.Guidelines.ON)
                 .start(this)
 
+        }
+
+       noteText.addTextChangedListener(object : TextWatcher{
+           override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
+
+           }
+
+           override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                checkButton.isVisible = true
+
+           }
+
+           override fun afterTextChanged(s: Editable) {
+
+           }
+
+       })
+
+        checkButton.setOnClickListener {
+            updateDatabase(tableName, setId ,noteText.text.toString())
+            checkButton.isVisible = false
+            Toast.makeText(this,"Notunuz Güncellendi",Toast.LENGTH_SHORT).show()
+
+        }
+
+
+
+
+    }
+    fun updateDatabase(tableName: String, setId: String, newNote: String){
+        try {
+
+            val database = this.openOrCreateDatabase(selectedField, Context.MODE_PRIVATE, null)
+
+            database.execSQL("UPDATE $tableName SET note= ?  WHERE setId=$setId" , arrayOf(newNote))
+
+        }catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 
@@ -132,6 +176,13 @@ class ShowSelectedImagesActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK){
 
                 saveImage(bitmap)
+                var intent = intent
+                overridePendingTransition(0, 0)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+                finish()
+                overridePendingTransition(0, 0)
+                startActivity(intent)
+
 
             }
 
@@ -139,6 +190,13 @@ class ShowSelectedImagesActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        var intent = Intent()
+        setResult(Activity.RESULT_OK, intent)
+        finish()
+
+    }
     fun saveImage(bitmap : Bitmap){
 
         val smallBitmap = makeSmallerBitmap(bitmap,1080)

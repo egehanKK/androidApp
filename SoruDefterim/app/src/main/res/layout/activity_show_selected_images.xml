@@ -19,13 +19,14 @@
 
     </androidx.viewpager.widget.ViewPager>
 
-    <TextView
+    <EditText
         android:id="@+id/showNotes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:fontFamily="sans-serif-medium"
-        android:text="TextView"
+        android:hint="Not Ekle"
+        android:textColorHint="#FFFFFF"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -67,5 +68,15 @@
         app:layout_constraintEnd_toEndOf="@+id/deleteBtn"
         app:layout_constraintStart_toStartOf="@+id/deleteBtn"
         app:layout_constraintTop_toBottomOf="@+id/deleteBtn" />
+
+    <ImageView
+        android:id="@+id/updateNoteBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/showNotes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/showNotes"
+        app:srcCompat="@drawable/check_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

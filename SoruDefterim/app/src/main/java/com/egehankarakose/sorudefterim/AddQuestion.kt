@@ -34,6 +34,7 @@ class AddQuestion: Fragment() ,OnItemClickListener4{
     var note = ""
     var selectedField = "TYT"
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -116,9 +117,13 @@ class AddQuestion: Fragment() ,OnItemClickListener4{
 
         aImage.setOnClickListener {
 
-            CropImage.activity()
-                .setGuidelines(CropImageView.Guidelines.ON)
-                .start(context!!,this)
+
+                CropImage.activity()
+                    .setGuidelines(CropImageView.Guidelines.ON)
+                    .start(context!!,this)
+
+
+
 
         }
 
@@ -126,7 +131,38 @@ class AddQuestion: Fragment() ,OnItemClickListener4{
         addQuestionBtn.setOnClickListener {
 
             note = notesText.text.toString()
-            saveImage()
+            var check = saveImage()
+
+            if (check){
+                Toast.makeText(context, "Soru Eklendi",Toast.LENGTH_SHORT).show()
+                subjectName = ""
+                courseName = ""
+                selectSubject.text = "Konu Seç"
+                selectSubject.isEnabled = false
+                qImage?.isEnabled = true
+                aImage?.isEnabled = false
+                selectCourse.text = "Ders Seç"
+                imageUri.clear()
+                note = ""
+                notesText.text.clear()
+                qImage.setImageResource(R.mipmap.add_que_foreground)
+
+                val recyclerView = view?.findViewById<RecyclerView>(R.id.addQuestionRecyclerView)
+                recyclerView?.layoutManager = GridLayoutManager(view?.context, 8) as RecyclerView.LayoutManager?
+
+                val dataList = ArrayList<BitmapImage>()
+
+
+                var line = view?.findViewById<View>(R.id.view2)
+                var line2 = view?.findViewById<View>(R.id.view3)
+                line?.isVisible = false
+                line2?.isVisible = false
+//        pass the values to RvAdapter
+                val rvAdapter =
+                    BitmapImageAdapter(dataList, this)
+//        set the recyclerView to the adapter
+                recyclerView?.adapter = rvAdapter
+            }
 
         }
 
@@ -210,13 +246,15 @@ class AddQuestion: Fragment() ,OnItemClickListener4{
 
     }
 
-    fun saveImage(){
+    fun saveImage() : Boolean{
 
         if (courseName.isEmpty() or subjectName.isEmpty()){
             Toast.makeText(context,"Ders ve Konu Seçiniz",Toast.LENGTH_LONG).show()
+            return false
         }
         else if(imageUri.size < 1){
             Toast.makeText(context,"Sorunuzun Fotoğrafını Ekleyiniz",Toast.LENGTH_LONG).show()
+            return false
 
         }
         if (imageUri != null) {
@@ -244,13 +282,40 @@ class AddQuestion: Fragment() ,OnItemClickListener4{
                     statement?.bindString(3,setValue)
                     statement?.execute()
 
+
                 } catch (e: Exception) {
                     e.printStackTrace()
+
                 }
+
+
+                try {
+
+                    val database = activity?.openOrCreateDatabase(selectedField, Context.MODE_PRIVATE, null)
+                    database?.execSQL("CREATE TABLE IF NOT EXISTS whole (id INTEGER PRIMARY KEY, setId VARCHAR)")
+
+                    val sqlString =
+                        "INSERT INTO whole (setId) VALUES (?)"
+                    val statement = database?.compileStatement(sqlString)
+                    statement?.bindString(1,setValue)
+                    statement?.execute()
+
+
+                } catch (e: Exception) {
+                    e.printStackTrace()
+
+                }
+
+
+
 
             }
 
+
+            return true
+
         }
+        return false
     }
 
     fun makeSmallerBitmap(image: Bitmap, maximumSize : Int) : Bitmap {

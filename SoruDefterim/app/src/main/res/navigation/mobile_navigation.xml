@@ -2,15 +2,15 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:id="@+id/mobile_navigation"
-  app:startDestination="@id/navigation_monster">
+  app:startDestination="@id/navigation_main">
 
 
   <fragment
-    android:id="@+id/navigation_slug"
+    android:id="@+id/navigation_profile"
     android:name="com.egehankarakose.sorudefterim.ProfileFragment"
     android:label="Filler" />
   <fragment
-      android:id="@+id/navigation_monster"
+      android:id="@+id/navigation_main"
       android:name="com.egehankarakose.sorudefterim.BlankFragment"
       android:label="Courses" />
   <fragment
