@@ -10,12 +10,12 @@
         android:id="@+id/subjectCourseNameText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0"
         android:layout_margin="16dp"
-        android:textStyle="bold"
+        android:layout_weight="0"
+        android:text="Ders Seç"
         android:textColor="@color/design_default_color_primary"
         android:textSize="30dp"
-        android:text="TextView" />
+        android:textStyle="bold" />
 
     <View
         android:layout_width="match_parent"

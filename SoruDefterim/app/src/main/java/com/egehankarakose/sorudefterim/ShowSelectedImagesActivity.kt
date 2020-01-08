@@ -223,6 +223,22 @@ class ShowSelectedImagesActivity : AppCompatActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+        try {
+
+            val database = openOrCreateDatabase(selectedField, Context.MODE_PRIVATE, null)
+            database?.execSQL("CREATE TABLE IF NOT EXISTS whole (id INTEGER PRIMARY KEY, setId VARCHAR)")
+
+            val sqlString =
+                "INSERT INTO whole (setId) VALUES (?)"
+            val statement = database?.compileStatement(sqlString)
+            statement?.bindString(1,setId)
+            statement?.execute()
+
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+
+        }
 
 
 
