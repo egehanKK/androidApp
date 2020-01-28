@@ -133,6 +133,17 @@ class ShowSelectedImagesActivity : AppCompatActivity() {
             e.printStackTrace()
         }
 
+        try {
+
+            val database = this.openOrCreateDatabase(selectedField, Context.MODE_PRIVATE, null)
+
+            database.execSQL("DELETE FROM whole WHERE setId= ?", arrayOf(setId))
+
+
+        }catch (e: Exception) {
+            e.printStackTrace()
+        }
+
 
     }
 

@@ -39,8 +39,8 @@ class MyHolder4(itemView: View): RecyclerView.ViewHolder(itemView){
 class BitmapImageAdapter(val userList: ArrayList<BitmapImage>, val itemClickListener: OnItemClickListener4) : RecyclerView.Adapter<MyHolder4>() {
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyHolder4 {
         val v = LayoutInflater.from(p0?.context).inflate(R.layout.adapter_show_images, p0, false)
-        v.layoutParams.height = 130
-        v.layoutParams.width = 130
+        v.layoutParams.height = 128
+        v.layoutParams.width = 128
         return MyHolder4(v);
     }
     override fun getItemCount(): Int {

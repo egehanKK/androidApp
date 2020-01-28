@@ -179,7 +179,7 @@ class AddQuestion: Fragment() ,OnItemClickListener4{
         var selectSubject = view?.findViewById<Button>(R.id.selectSubjectBtn)
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
             var result = CropImage.getActivityResult(data)
-            Log.d("URI", result.uri.toString())
+
             var bitmap = MediaStore.Images.Media.getBitmap(activity?.contentResolver, result.uri)
             imageUri.add(bitmap)
             var qImage = view?.findViewById<ImageView>(R.id.addQuestionImage)
